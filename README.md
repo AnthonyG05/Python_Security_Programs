@@ -1,4 +1,4 @@
-# 🔐 SHA-256 Password Hasher
+# SHA-256 Password Hasher
 
 ## Overview
 
