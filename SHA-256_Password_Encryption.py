@@ -1,5 +1,3 @@
-# Question 3
-
 import hashlib 
 import csv
 import string
@@ -7,7 +5,7 @@ import secrets
 import random
 passwordList = []
 def generate_sha256():
-    with open("C:\\Users\\Anthony PC\\Downloads\\Assignment_4\\ExportedFiles\\rainbow.csv", "w") as myFile:
+    with open("your_computer\\rainbow.csv", "w") as myFile:
         writer = csv.writer(myFile)
         writer.writerow(["password","sha256_hash"])
         for i in range(0,10):
@@ -23,8 +21,8 @@ def generate_sha256():
             writer.writerow([passwords,hash_256])
 
 def generate_sha256withSalt():
-    with open("C:\\Users\\Anthony PC\\Downloads\\Assignment_4\\ExportedFiles\\rainbow.csv", "r+") as myFile, \
-        open("C:\\Users\\Anthony PC\\Downloads\\Assignment_4\\ExportedFiles\\rainbow2.csv", "w+", newline="") as outfile:
+    with open("your_computer\\rainbow.csv", "r+") as myFile, \
+        open("your_computer\\rainbow2.csv", "w+", newline="") as outfile:
         hashFile = csv.DictReader(myFile, delimiter=",")
         column_name=['PIN', 'SALT', 'Password_Hash']
         csvWriter = csv.writer(outfile)
